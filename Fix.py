@@ -155,24 +155,6 @@ def NOTIFIED_READ_MESSAGE(op):
     except:
         pass
         
-def autolike():
-    for zx in range(0,20):
-        hasil = ki.activity(limit=20)
-        if hasil['result']['posts'][zx]['postInfo']['liked'] == False:
-            try:    
-                ki.like(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],likeType=1002)
-                ki.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"Like by Me\n\nhttp://line.me/ti/p/zuFNPuXyEb")
-                print "Like"
-            except:
-                pass
-            else:
-                print "Already Liked"
-    time.sleep(500)
-    thread2 = threading.Thread(target=autolike)
-    thread2.daemon = True
-    thread2.start()
-
-
 def bot(op):
     try:
         if op.type == 0:
@@ -184,22 +166,7 @@ def bot(op):
                     pass
                 else:
                     cl.sendText(op.param1,str(wait["message"]))
-                    
-        #if op.type == 11:
-        	    #if wait["Qr"] == True:
-        	        #if op.param2 in Bots or wait["Whitelist"]:
-        	            #pass
-                    #else:
-                        #X = cl.getGroup(op.param1)
-                        #X.preventJoinByTicket = False
-                        #cl.updateGroup(X)
-                        #Ti = cl.reissueGroupTicket(op.param1)
-                        #ki6.acceptGroupInvitationByTicket(op.param1,Ti)
-                        #X.preventJoinByTicket = True
-                        #cl.updateGroup(X)
-                        #ki6.kickoutFromGroup(op.param1,[op.param2])
-                        #ki6.leaveGroup(op.param1)
-
+                      
         if op.type == 13:
                 if op.param3 in mid:
                     if op.param2 in Amid:
@@ -626,6 +593,7 @@ def bot(op):
                             ki4.leaveGroup(op.param1)
                             ki3.leaveGroup(op.param1)
                             ki2.leaveGroup(op.param1)
+			    cl.inviteIntoGroup(op.param1,admin)
                             G = cl.getGroup(op.param1)
                             G.preventJoinByTicket = True
                             cl.updateGroup(G)
@@ -637,11 +605,6 @@ def bot(op):
                             else:
                                 wait["blacklist"][op.param2] = True
 		
-        if op.type == 19:
-            if op.param3 in admin:
-                cl.kickoutFromGroup(op.param1,[op.param2])
-                cl.inviteIntoGroup(op.param1,admin)
-				
         if op.type == 13:
             if mid in op.param3:
                 G = cl.getGroup(op.param1)
