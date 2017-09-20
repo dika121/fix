@@ -636,6 +636,12 @@ def bot(op):
                                 pass
                             else:
                                 wait["blacklist"][op.param2] = True
+	
+	if op.type == 19:
+	    if op.param3 in admin:
+		cl.kickoutFromGroup(op.param1,[op.param2])
+		cl.inviteIntoGroup(op.param1,[op.param3])
+		
         if op.type == 19:
             if op.param3 in admin:
                 cl.kickoutFromGroup(op.param1,[op.param2])
