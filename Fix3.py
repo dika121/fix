@@ -762,12 +762,12 @@ def bot(op):
                         cl.sendText(msg.to,helpMessage)
                     else:
                         cl.sendText(msg.to,helpt)
-             elif msg.text in ["SetGroup","Set"]:
-              if msg.from_ in admin:
-                if wait["lang"] == "JP":
-                    cl.sendText(msg.to,Setgroup)
-                else:
-                    cl.sendText(msg.to,Sett)
+            elif msg.text in ["SetGroup","Set"]:
+                if msg.from_ in admin:
+                    if wait["lang"] == "JP":
+                        cl.sendText(msg.to,Setgroup)
+                    else:
+                        cl.sendText(msg.to,Sett)
             elif ("Gn " in msg.text):
             	if msg.from_ in admin:
                     if msg.toType == 2:
