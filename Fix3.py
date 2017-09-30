@@ -6,7 +6,7 @@ from datetime import datetime
 import time,random,sys,json,codecs,threading,glob,re
 
 cl = LINETCR.LINE()
-cl.login(token='ElApZmmzlv231zPG7B82.37apuNHgOzBUButCBQXbyG.w0BN1hTYunvAoFjxqIbjToySkNtAar6VihxEuQhz9Y8=')
+cl.login(qr=True)
 cl.loginResult()
 
 ki = LINETCR.LINE()
@@ -100,7 +100,7 @@ wait = {
     "wblack":False,
     "dblack":False,
     "clock":False,
-    "cName":"(BOT)¹ ",
+    "cName":"Iphenk ",
     "cName2":"(BOT)² ",
     "cName3":"(BOT)³ ",
     "cName4":"(BOT)⁴ ",
@@ -321,6 +321,11 @@ def bot(op):
                         pass
                     try:
                         ki.kickoutFromGroup(op.param1,[op.param2])
+			ki2.kickoutFromGroup(op.param1,[op.param2])
+			ki3.kickoutFromGroup(op.param1,[op.param2])
+			ki4.kickoutFromGroup(op.param1,[op.param2])
+			ki5.kickoutFromGroup(op.param1,[op.param2])
+			ki6.kickoutFromGroup(op.param1,[op.param2])
                     except:
                         try:
                             random.choice(KAC).kickoutFromGroup(op.param1,[op.param2])
@@ -631,7 +636,7 @@ def bot(op):
             msg = op.message
             if msg.toType == 0:
                 msg.to = msg.from_
-                if msg.from_ == profile.mid:
+                if msg.from_ == "u9e5a757e7b6e466baf87e8f747d96eb5":
                     if "join:" in msg.text:
                         list_ = msg.text.split(":")
                         try:
