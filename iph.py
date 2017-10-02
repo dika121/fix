@@ -1702,14 +1702,15 @@ def bot(op):
                            pass
                        else:
                            for target in targets:
-                                try:
-                                    klist=[cl,ki,kk,kc]
-                                    kicker=random.choice(klist)
-                                    kicker.kickoutFromGroup(msg.to,[target])
-                                    print (msg.to,[g.mid])
-                                except:
-                                    ki.sendText(msg.to,"Kasian Di Kick....")
-                                    kc.sendText(msg.to,"Hehehe")
+			       if target not in admin or Bots:
+                                   try:
+                                       klist=[cl,ki,kk,kc]
+                                       kicker=random.choice(klist)
+                                       kicker.kickoutFromGroup(msg.to,[target])
+                                       print (msg.to,[g.mid])
+                                   except:
+                                       ki.sendText(msg.to,"Kasian Di Kick....")
+                                       kc.sendText(msg.to,"Hehehe")
         #----------------Fungsi Kick User Target Finish----------------------#      
             elif "Blacklist @ " in msg.text:
                 _name = msg.text.replace("Blacklist @ ","")
