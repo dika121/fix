@@ -5,37 +5,37 @@ from LINETCR.lib.curve.ttypes import *
 from datetime import datetime
 import time,random,sys,json,codecs,threading,glob,re
 
-cl = LINETCR.LINE()
-cl.login(token='ElApZmmzlv231zPG7B82.37apuNHgOzBUButCBQXbyG.w0BN1hTYunvAoFjxqIbjToySkNtAar6VihxEuQhz9Y8=')
-cl.loginResult()
-
 #cl = LINETCR.LINE()
-#cl.login(qr=True)
+#cl.login(token='ElApZmmzlv231zPG7B82.37apuNHgOzBUButCBQXbyG.w0BN1hTYunvAoFjxqIbjToySkNtAar6VihxEuQhz9Y8=')
 #cl.loginResult()
 
-ki = LINETCR.LINE()
-ki.login(token='ElQyGPK10Kh0Aj3kfHYc.uCWFQOB/MvfQf3dFLBysda.t/upJcZYCNoVlvqTIFn5FtM0rTxJ+MZAicbsNX71w6A=')
-ki.loginResult()
+cl = LINETCR.LINE()
+cl.login(qr=True)
+cl.loginResult()
 
-#ki  = LINETCR.LINE()
-#ki.login(qr=True)
+#ki = LINETCR.LINE()
+#ki.login(token='ElQyGPK10Kh0Aj3kfHYc.uCWFQOB/MvfQf3dFLBysda.t/upJcZYCNoVlvqTIFn5FtM0rTxJ+MZAicbsNX71w6A=')
 #ki.loginResult()
 
-kk = LINETCR.LINE()
-kk.login(token='ElQiR6Sjz5ID1unL6EVb.gsAa3gA1p+gvCNtTMc8GoW.GZCT7FlGu7Mgq/JDg0Fyz4RrQMbIsVSh3Y+UgNWiglY=')
-kk.loginResult()
+ki  = LINETCR.LINE()
+ki.login(qr=True)
+ki.loginResult()
 
 #kk = LINETCR.LINE()
-#kk.login(qr=True)
+#kk.login(token='ElQiR6Sjz5ID1unL6EVb.gsAa3gA1p+gvCNtTMc8GoW.GZCT7FlGu7Mgq/JDg0Fyz4RrQMbIsVSh3Y+UgNWiglY=')
 #kk.loginResult()
 
-kc = LINETCR.LINE()
-kc.login(token='Elqv1GQEVU4lcdJziUW7.Z164UOSS5be+ggZtJGDXrW.KDKHL9UnINfOAaZR8McFGn7bxlb85IE+GsWEkHvayu0=')
-kc.loginResult()
+kk = LINETCR.LINE()
+kk.login(qr=True)
+kk.loginResult()
 
-#kc  = LINETCR.LINE()
-#kc.login(qr=True)
+#kc = LINETCR.LINE()
+#kc.login(token='Elqv1GQEVU4lcdJziUW7.Z164UOSS5be+ggZtJGDXrW.KDKHL9UnINfOAaZR8McFGn7bxlb85IE+GsWEkHvayu0=')
 #kc.loginResult()
+
+kc  = LINETCR.LINE()
+kc.login(qr=True)
+kc.loginResult()
 
 print "login success"
 reload(sys)
@@ -85,8 +85,8 @@ Amid = ki.getProfile().mid
 Bmid = kk.getProfile().mid
 Cmid = kc.getProfile().mid
 
-Bots=[mid,Amid,Bmid,Cmid,"u9e5a757e7b6e466baf87e8f747d96eb5"]
-admin=["u9e5a757e7b6e466baf87e8f747d96eb5"]
+Bots=[mid,Amid,Bmid,Cmid,"u9e5a757e7b6e466baf87e8f747d96eb5","u17642487b67dbc033cb9ae52d429facd"]
+admin=["u9e5a757e7b6e466baf87e8f747d96eb5","u17642487b67dbc033cb9ae52d429facd"]
 wait = {
     'contact':True,
     'autoJoin':True,
