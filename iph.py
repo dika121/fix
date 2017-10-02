@@ -86,7 +86,7 @@ Bmid = kk.getProfile().mid
 Cmid = kc.getProfile().mid
 
 Bots=[mid,Amid,Bmid,Cmid,"u9e5a757e7b6e466baf87e8f747d96eb5","u17642487b67dbc033cb9ae52d429facd"]
-admin=["u9e5a757e7b6e466baf87e8f747d96eb5","u17642487b67dbc033cb9ae52d429facd"]
+admin=["u9e5a757e7b6e466baf87e8f747d96eb5","u9f9a0958d6267f3a9a9dfe137b05dacc","u17642487b67dbc033cb9ae52d429facd","u441e34637b14d77efed5d3d0fea1fea5"]
 wait = {
     'contact':True,
     'autoJoin':True,
@@ -1016,56 +1016,56 @@ def bot(op):
                         cl.sendText(msg.to,"Guest Stranger Off")
                     else:
                         cl.sendText(msg.to,"done")
-            elif msg.text in ["Qr protect on","qr on"]:
+            elif msg.text in ["Qrp on","qr on"]:
               if msg.from_ in admin:
                 if wait["ProtectQR"] == True:
                     if wait["lang"] == "JP":
-                        cl.sendText(msg.to,"Protect QR On")
+                        cl.sendText(msg.to,"QR Protection On")
                     else:
                         cl.sendText(msg.to,"done")
                 else:
                     wait["ProtectQR"] = True
                     if wait["lang"] == "JP":
-                        cl.sendText(msg.to,"Protect QR On")
+                        cl.sendText(msg.to,"QR Protection On")
                     else:
                         cl.sendText(msg.to,"done")
-            elif msg.text in ["Qr protect off","qr off"]:
+            elif msg.text in ["Qrp off","qr off"]:
               if msg.from_ in admin:
                 if wait["ProtectQR"] == False:
                     if wait["lang"] == "JP":
-                        cl.sendText(msg.to,"Protect QR Off")
+                        cl.sendText(msg.to,"QR Protection Off")
                     else:
                         cl.sendText(msg.to,"done")
                 else:
                     wait["ProtectQR"] = False
                     if wait["lang"] == "JP":
-                        cl.sendText(msg.to,"Protect QR Off")
+                        cl.sendText(msg.to,"QR Protection Off")
                     else:
                         cl.sendText(msg.to,"done")
             elif msg.text in ["Contact On","Contact on","contact on"]:
               if msg.from_ in admin:
                 if wait["contact"] == True:
                     if wait["lang"] == "JP":
-                        cl.sendText(msg.to,"Cek Mid Send Contact On")
+                        cl.sendText(msg.to,"Cek Mid Contact On")
                     else:
                         cl.sendText(msg.to,"done")
                 else:
                     wait["contact"] = True
                     if wait["lang"] == "JP":
-                        cl.sendText(msg.to,"Cek Mid Send Contact On")
+                        cl.sendText(msg.to,"Cek Mid Contact On")
                     else:
                         cl.sendText(msg.to,"done")
             elif msg.text in ["Contact Off","Contact off","contact off"]:
               if msg.from_ in admin:
                 if wait["contact"] == False:
                     if wait["lang"] == "JP":
-                        cl.sendText(msg.to,"Cek Mid Send Contact Off")
+                        cl.sendText(msg.to,"Cek Mid Contact Off")
                     else:
                         cl.sendText(msg.to,"done")
                 else:
                     wait["contact"] = False
                     if wait["lang"] == "JP":
-                        cl.sendText(msg.to,"Cek Mid Send Contact Off")
+                        cl.sendText(msg.to,"Cek Mid Contact Off")
                     else:
                         cl.sendText(msg.to,"done")
             elif msg.text in ["è‡ªå‹•å�‚åŠ :ã‚ªãƒ³","Join on","Auto join:on","è‡ªå‹•å�ƒåŠ ï¼šé–‹"]:
@@ -1882,7 +1882,7 @@ def bot(op):
       #-------------Fungsi Balesan Respon Finish---------------------#
 
        #-------------Fungsi Speedbot Start---------------------#
-            elif msg.text in ["Sp","Speedbot","speedbot"]:
+            elif msg.text in ["Speed","Speedbot","speedbot"]:
                 start = time.time()
                 cl.sendText(msg.to, "Waiting...")
                 elapsed_time = time.time() - start
