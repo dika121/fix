@@ -270,7 +270,7 @@ def bot(op):
                     if op.param2 in Bots:
                         pass
                     try:
-                        ki.kickoutFromGroup(op.param1,[op.param2])
+                        random.choice(KAC).kickoutFromGroup(op.param1,[op.param2])
                     except:
                         try:
                             random.choice(KAC).kickoutFromGroup(op.param1,[op.param2])
@@ -305,8 +305,7 @@ def bot(op):
                     if op.param2 in Bots:
                         pass
                     try:
-                        kk.kickoutFromGroup(op.param1,[op.param2])
-                        kc.kickoutFromGroup(op.param1,[op.param2])
+                        random.choice(KAC).kickoutFromGroup(op.param1,[op.param2])
                     except:
                         try:
                             random.choice(KAC).kickoutFromGroup(op.param1,[op.param2])
@@ -340,8 +339,7 @@ def bot(op):
                     if op.param2 in Bots:
                         pass
                     try:
-                        kc.kickoutFromGroup(op.param1,[op.param2])
-                        kk.kickoutFromGroup(op.param1,[op.param2])
+                        random.choice(KAC).kickoutFromGroup(op.param1,[op.param2])
                     except:
                         try:
                             random.choice(KAC).kickoutFromGroup(op.param1,[op.param2])
@@ -377,8 +375,7 @@ def bot(op):
                     if op.param2 in Bots:
                         pass
                     try:
-                        cl.kickoutFromGroup(op.param1,[op.param2])
-                        kk.kickoutFromGroup(op.param1,[op.param2])
+                        random.choice(KAC).kickoutFromGroup(op.param1,[op.param2])
                     except:
                         try:
                             random.choice(KAC).kickoutFromGroup(op.param1,[op.param2])
