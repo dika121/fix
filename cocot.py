@@ -1319,11 +1319,11 @@ def bot(op):
                         print "ok"
                         _name = msg.text.replace("Cleanse","")
                         gs = ki.getGroup(msg.to)
-                        gs = kk.getGroup(msg.to)
-                        gs = kc.getGroup(msg.to)
+                        gs = ki2.getGroup(msg.to)
+                        gs = ki3.getGroup(msg.to)
                         ki.sendText(msg.to,"Just some casual cleansing ô")
-                        kk.sendText(msg.to,"Group cleansed.")
-                        kc.sendText(msg.to,"Fuck You All")
+                        ki2.sendText(msg.to,"Group cleansed.")
+                        ki3.sendText(msg.to,"Fuck You All")
                         targets = []
                         for g in gs.members:
                             if _name in g.displayName:
