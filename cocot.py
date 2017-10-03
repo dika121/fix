@@ -225,21 +225,6 @@ def bot(op):
                     pass
                 else:
                     cl.cancelGroupInvitation(op.param1, matched_list)
-                    
-        if op.type == 19:
-            if op.param2 not in Bots:
-                random.choice(KAC).kickoutFromGroup(op.param1,[op.param2])
-                
-        if op.type == 19:
-            if op.param3 in admin:
-                cl.kickoutFromGroup(op.param1,[op.param2])
-                cl.inviteIntoGroup(op.param1,admin)
-            else:
-                pass
-                
-        if op.type == 19:
-            if mid in op.param3:
-                wait["blacklist"][op.param2] = True
         
         if op.type == 19:
                 if mid in op.param3:
@@ -428,6 +413,14 @@ def bot(op):
                     else:
                         wait["blacklist"][op.param2] = True
         
+	if op.type == 19:
+                if mid in op.param3:
+                    wait["blacklist"][op.param2] = True
+		
+	if op.type == 19:
+                if op.param2 not in Bots:
+                    random.choice(KAC).kickoutFromGroup(op.param1,[op.param2])
+		
         if op.type == 13:
               if mid in op.param3:
                  G = cl.getGroup(op.param1)
