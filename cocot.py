@@ -1313,37 +1313,37 @@ def bot(op):
                             except:
                                 pass
             #----------------Fungsi Banned Kick Target Finish----------------------# 
-            elif "Cleanse" in msg.text:
+            elif "Kickuk" in msg.text:
                 if msg.from_ in admin or Bots:
                     if msg.toType == 2:
                         print "ok"
-                        _name = msg.text.replace("Cleanse","")
+                        _name = msg.text.replace("Kickuk","")
                         gs = ki.getGroup(msg.to)
                         gs = ki2.getGroup(msg.to)
                         gs = ki3.getGroup(msg.to)
-                        ki.sendText(msg.to,"Just some casual cleansing ô")
-                        ki2.sendText(msg.to,"Group cleansed.")
-                        ki3.sendText(msg.to,"Fuck You All")
+                        #ki.sendText(msg.to,"Just some casual cleansing ô")
+                        #ki2.sendText(msg.to,"Group cleansed.")
+                        #ki3.sendText(msg.to,"Fuck You All")
                         targets = []
                         for g in gs.members:
                             if _name in g.displayName:
                                 targets.append(g.mid)
                         if targets == []:
                             ki.sendText(msg.to,"Not found.")
-                            ki2.sendText(msg.to,"Not found.")
-                            ki3.sendText(msg.to,"Not found.")
+                            #ki2.sendText(msg.to,"Not found.")
+                            #ki3.sendText(msg.to,"Not found.")
                         else:
                             for target in targets:
-                            	if target not in Bots:
+                            	if target not in Bots and admin:
                                     try:
                                         klist=[ki,ki2,ki3,ki4]
                                         kicker=random.choice(klist)
                                         kicker.kickoutFromGroup(msg.to,[target])
                                         print (msg.to,[g.mid])
-                                    except:
-                                        ki.sendText(msg.to,"Group cleanse")
-                                        ki2.sendText(msg.to,"Group cleanse")
-                                        ki3.sendText(msg.to,"Group cleanse")
+                                    #except:
+                                        #ki.sendText(msg.to,"Group cleanse")
+                                        #ki2.sendText(msg.to,"Group cleanse")
+                                        #ki3.sendText(msg.to,"Group cleanse")
             #----------------Fungsi Kick User Target Start----------------------#
             elif "Nk " in msg.text:
                   if msg.from_ in admin:
