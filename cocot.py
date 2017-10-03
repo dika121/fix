@@ -258,6 +258,7 @@ def bot(op):
                             pass
                         else:
                             wait["blacklist"][op.param2] = True
+			
                     G = ki.getGroup(op.param1)
                     G.preventJoinByTicket = False
                     ki.updateGroup(G)
@@ -295,10 +296,10 @@ def bot(op):
                         else:
                             wait["blacklist"][op.param2] = True
 
-                    X = ki3.getGroup(op.param1)
+                    X = ki2.getGroup(op.param1)
                     X.preventJoinByTicket = False
-                    cl.updateGroup(X)
-                    Ti = ki3.reissueGroupTicket(op.param1)
+                    ki2.updateGroup(X)
+                    Ti = ki2.reissueGroupTicket(op.param1)
                     cl.acceptGroupInvitationByTicket(op.param1,Ti)
                     ki.acceptGroupInvitationByTicket(op.param1,Ti)
                     ki2.acceptGroupInvitationByTicket(op.param1,Ti)
@@ -989,6 +990,8 @@ def bot(op):
                 else:md+=" Auto add : off\n"
                 if wait["commentOn"] == True: md+=" Comment : on\n"
                 else:md+=" Comment : off\n"
+		if wait["atjointicket"] == True: md+=" Auto Join Group by Ticket : on\n"
+                else:md+=" Auto Join Group by Ticket : off\n"
                 cl.sendText(msg.to,md)
             elif "album merit " in msg.text:
                 gid = msg.text.replace("album merit ","")
@@ -1359,15 +1362,14 @@ def bot(op):
                            pass
                        else:
                            for target in targets:
-			        if target not in Bots:
-                                    try:
-                                        klist=[cl,ki,ki2,ki3,ki4]
-                                        kicker=random.choice(klist)
-                                        kicker.kickoutFromGroup(msg.to,[target])
-                                        print (msg.to,[g.mid])
-                                    except:
-                                        ki.sendText(msg.to,"Sorry...")
-                                        kc.sendText(msg.to,".......")
+                                try:
+                                    klist=[cl,ki,ki2,ki3,ki4]
+                                    kicker=random.choice(klist)
+                                    kicker.kickoutFromGroup(msg.to,[target])
+                                    print (msg.to,[g.mid])
+                                except:
+                                    ki.sendText(msg.to,"Sorry...")
+                                    kc.sendText(msg.to,".......")
             #----------------Fungsi Kick User Target Finish----------------------#
             
             #----------------Fungsi Bl User Target Start-----------------------#
