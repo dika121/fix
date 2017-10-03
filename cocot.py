@@ -850,13 +850,13 @@ def bot(op):
                             cl.sendText(msg.to,"done")		
 	    elif msg.text in ["Proc on","proc on"]:
                 if msg.from_ in Bots:
-                    if wait["Protectcancel"] == False:
+                    if wait["Protectcancel"] == True:
                         if wait["lang"] == "JP":
                             cl.sendText(msg.to,"Protect cancel on")
                         else:
                             cl.sendText(msg.to,"done")
                     else:
-                        wait["Protectcancel"] = False
+                        wait["Protectcancel"] = True
                         if wait["lang"] == "JP":
                             cl.sendText(msg.to,"Protect cancel on")
                         else:
