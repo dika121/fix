@@ -807,7 +807,7 @@ def bot(op):
                             cl.sendText(msg.to,"Guest Stranger On")
                         else:
                             cl.sendText(msg.to,"done")
-            elif msg.text in ["Guest on","guest on"]:
+            elif msg.text in ["Guest off","guest off"]:
                 if msg.from_ in Bots:
                     if wait["Protectguest"] == True:
                         if wait["lang"] == "JP":
