@@ -6,23 +6,23 @@ from datetime import datetime
 import time,random,sys,json,codecs,threading,glob
 
 cl = LINETCR.LINE()
-cl.login(qr=True)
+cl.login(token='ElPRGGtvICj7elueMqF5.NLP1FNTUrMUVH/J3r9LUTq.dR9DY3MyApZpgC29ugR0QbS9YT7i8oBnLGkPzoo9EYA=')
 cl.loginResult()
 
 ki = LINETCR.LINE()
-ki.login(qr=True)
+ki.login(token='ElgbjgXq3cjHS64zydH2.37apuNHgOzBUButCBQXbyG.Rbq5b2GQUFkTJA2vPo+n7tUol9ggKnTIct4ILRa8i0M=')
 ki.loginResult()
 
 ki2 = LINETCR.LINE()
-ki2.login(qr=True)
+ki2.login(token='ElHNkM51CAi32IHyrtvc.uCWFQOB/MvfQf3dFLBysda.AZbWRjHLJLqfa6ZOhb/JmaK29O1N0cggCaSrYaXCEjY=')
 ki2.loginResult()
 
 ki3 = LINETCR.LINE()
-ki3.login(qr=True)
+ki3.login(token='ElQYC04GykcGvXuQ2GLb.gsAa3gA1p+gvCNtTMc8GoW.MDlnJMRQ2sHt7Nz/7XCGtzg4ujiVMMO3iUdCTHY7LOw=')
 ki3.loginResult()
 
 ki4 = LINETCR.LINE()
-ki4.login(qr=True)
+ki4.login(token='EldQ5iHxEp0jCcfWaUF7.Z164UOSS5be+ggZtJGDXrW.UUK3D5OCM4ZsS7Y4vlKXnayubxMzvFyIN7TTsyVK/i4=')
 ki4.loginResult()
 
 print u"login success"
