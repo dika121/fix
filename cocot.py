@@ -31,37 +31,38 @@ sys.setdefaultencoding('utf-8')
 
 helpMessage =""" ]%%℅℅℅℅℅℅℅℅[
 
-􀔃􀅕PUBLIC COMMAND
+↠PUBLIC COMMAND↞
 
-[Bot]     Cek Akun Bot
-[Id Group] Cek Id Group
-[Ginfo]    Group Info
-[Mid all]   Cek All mid Bot
-[Respon]   Cek Respon Bot
-[Speed] Cek Kecepatan Bot
-[Banlist]  Cek List Akun Banned
-[Gn namagroup] Ganti Nama Group
-[Cancel] Cancel User Masuk Group
-[Tag All]      Mention Semua User
-[Set View] Cek Privasi Group
-[Open]  Membuka Url Group
-[Close] Menutup Url Group
+♣[Bot]       Cek Akun Bot
+♣[Id Group]  Cek Id Group
+♣[Ginfo]     Group Info
+♣[Mid all]   Cek All mid Bot
+♣[Respon]    Cek Respon Bot
+♣[Speed]     Cek Kecepatan Bot
+♣[Banlist]   Cek Banned List
+♣[Gn G.Name] Ganti Nama Group
+♣[Cancel]    Cancel Group Invitation
+♣[Tag All]   Mention All User
+♣[View set]  Cek Privasi Group
+♣[Open]      Open url group
+♣[Close]     Close Url Group
 
-􀔃􀅕PRIVATE COMMAND
+↠PRIVATE COMMAND↞
 
-[SetGroup] Menggatur Privasi Grup
-[Banned @] Bann Target
-[Unban @]  Unbann Target
-[Kill @] Kick Target Bann
-[Nk @]   Kick Target User
-[All join] Invite Semua Bot
+♣[Banned @] Bann Target
+♣[Unban @]  Unbann Target
+♣[Kill @]   Kick Target Bann
+♣[Nk @]     Kick Target User
+♣[All join] Invite Semua Bot
 """
 
-Setgroup =""" Privasi Menu 
+Setgroup =""" ↠Privasi Menu↞ 
 
-[Protect QR -- Qr on / off]
-[Mid Via Contact -- Contact On / Off]
-[Reject Invite -- Guest On / Off]
+♣[Protect QR] -- [Qr on / off]
+♣[Mid Check]  -- [Contact On / Off]
+♣[Reject Invite] --[Guest On / Off]
+
+゜゜゜゜゜゜゜゜゜゜゜゜゜゜゜゜゜゜゜゜
 """
 KAC=[ki,ki2,ki3,ki4,cl]
 mid = cl.getProfile().mid
@@ -607,7 +608,7 @@ def bot(op):
                 ki3.sendMessage(msg)
                 
                 msg.contentType = 13
-                msg.contentMetadata = {'mid': Cmid}
+                msg.contentMetadata = {'mid': Dmid}
                 ki4.sendMessage(msg)
                 
             elif msg.text in ["Gift"]:
@@ -995,7 +996,7 @@ def bot(op):
                         cl.sendText(msg.to,"done")
                     else:
                         cl.sendText(msg.to,"è¦�äº†å…³æ–­ã€‚")
-            elif msg.text in ["Set View"]:
+            elif msg.text in ["View set"]:
                 md = ""
                 if wait["Protectcancel"] == True: md+=" Protect Cancel : on\n"
                 else: md+=" Protect Cancel : off\n"
@@ -1483,11 +1484,11 @@ def bot(op):
                                     ki.sendText(msg.to,"Error")
             #----------------Fungsi Unbanned User Target Finish-----------------------#
             elif msg.text in ["Respon","respon","Respon Dong","respon dong"]:
-            	if msg.from_ in Botd:
-                    cl.sendText(msg.to,"..............")
+            	if msg.from_ in Bots:
                     ki.sendText(msg.to,"..............")
-                    kk.sendText(msg.to,"...............")
-                    kc.sendText(msg.to,".............")
+                    ki2.sendText(msg.to,"...............")
+                    ki3.sendText(msg.to,".............")
+		    ki4.sendText(msg.to,".............")
                     
             elif msg.text in ["Speed","Speedbot","speedbot"]:
             	if msg.from_ in Bots:
@@ -1514,7 +1515,7 @@ def bot(op):
                     cl.sendText(msg.to,"send contact")
             elif msg.text in ["Banlist"]:
                 if wait["blacklist"] == {}:
-                    cl.sendText(msg.to,"Tidak Ada Akun Terbanned")
+                    cl.sendText(msg.to,"Nothing is banned")
                 else:
                     ki.sendText(msg.to,"Blacklist user")
                     mc = ""
