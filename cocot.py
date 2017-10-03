@@ -70,8 +70,8 @@ Bmid = ki2.getProfile().mid
 Cmid = ki3.getProfile().mid
 Dmid = ki4.getProfile().mid
 
-Bots=[mid,Amid,Bmid,Cmid,"u9e5a757e7b6e466baf87e8f747d96eb5","u17642487b67dbc033cb9ae52d429facd"]
-admin=["u9e5a757e7b6e466baf87e8f747d96eb5","u9f9a0958d6267f3a9a9dfe137b05dacc","u17642487b67dbc033cb9ae52d429facd","u441e34637b14d77efed5d3d0fea1fea5"]
+Bots=[mid,Amid,Bmid,Cmid,Dmid]
+admin=["u9f9a0958d6267f3a9a9dfe137b05dacc","u17642487b67dbc033cb9ae52d429facd","u441e34637b14d77efed5d3d0fea1fea5"]
 wait = {
     'contact':True,
     'autoJoin':True,
@@ -424,7 +424,7 @@ def bot(op):
 	if op.type == 19:
 		if op.param3 in admin:
 		    cl.kickoutFromGroup(op.param1,[op.param2])
-		    cl.invitaIntoGroup(op.param1,[op.param3])
+		    cl.inviteIntoGroup(op.param1,[op.param3])
 		else:
 		    pass
 	
