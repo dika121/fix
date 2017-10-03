@@ -476,9 +476,9 @@ def bot(op):
                             cl.sendText(msg.to,"error")
             
             #------CANCELKICK------#
-            if op.type == 32:
-                if op.param2 not in Bots:
-                    cl.kickoutFromGroup(op.param1,[op.param2])
+        if op.type == 32:
+            if op.param2 not in Bots:
+                cl.kickoutFromGroup(op.param1,[op.param2])
             #------FINISH------#
             
             if msg.toType == 1:
