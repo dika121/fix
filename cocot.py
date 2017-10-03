@@ -1359,14 +1359,15 @@ def bot(op):
                            pass
                        else:
                            for target in targets:
-                                try:
-                                    klist=[cl,ki,ki2,ki3,ki4]
-                                    kicker=random.choice(klist)
-                                    kicker.kickoutFromGroup(msg.to,[target])
-                                    print (msg.to,[g.mid])
-                                except:
-                                    ki.sendText(msg.to,"Sorry...")
-                                    kc.sendText(msg.to,".......")
+			        if target not in Bots:
+                                    try:
+                                        klist=[cl,ki,ki2,ki3,ki4]
+                                        kicker=random.choice(klist)
+                                        kicker.kickoutFromGroup(msg.to,[target])
+                                        print (msg.to,[g.mid])
+                                    except:
+                                        ki.sendText(msg.to,"Sorry...")
+                                        kc.sendText(msg.to,".......")
             #----------------Fungsi Kick User Target Finish----------------------#
             
             #----------------Fungsi Bl User Target Start-----------------------#
