@@ -71,7 +71,7 @@ Cmid = ki3.getProfile().mid
 Dmid = ki4.getProfile().mid
 
 Bots=[mid,Amid,Bmid,Cmid,Dmid]
-admin=["u9f9a0958d6267f3a9a9dfe137b05dacc","u17642487b67dbc033cb9ae52d429facd","u441e34637b14d77efed5d3d0fea1fea5"]
+admin=["u9e5a757e7b6e466baf87e8f747d96eb5","u9f9a0958d6267f3a9a9dfe137b05dacc","u17642487b67dbc033cb9ae52d429facd","u441e34637b14d77efed5d3d0fea1fea5"]
 wait = {
     'contact':True,
     'autoJoin':True,
@@ -1229,7 +1229,7 @@ def bot(op):
                         cl.sendText(msg.to, "An already read point has not been set.\n「set」you can send ♪ read point will be created ♪")
            #----------------Fungsi Join Group Start-----------------------#
             elif msg.text in ["one","All","Ayo masuk","One"]:
-                if msg.from_ in admin:
+                if msg.from_ in admin or Bots:
                         G = cl.getGroup(msg.to)
                         ginfo = cl.getGroup(msg.to)
                         G.preventJoinByTicket = False
