@@ -1224,7 +1224,7 @@ def bot(op):
                     else:
                         cl.sendText(msg.to, "An already read point has not been set.\n「set」you can send ♪ read point will be created ♪")
            #----------------Fungsi Join Group Start-----------------------#
-            elif msg.text in ["All","All join","Ayo masuk"]:
+            elif msg.text in ["one","All join","Ayo masuk","One"]:
                 if msg.from_ in admin:
                         G = cl.getGroup(msg.to)
                         ginfo = cl.getGroup(msg.to)
@@ -1255,8 +1255,9 @@ def bot(op):
                         ginfo = cl.getGroup(msg.to)
                         try:
                             ki.leaveGroup(msg.to)
-                            kk.leaveGroup(msg.to)
-                            kc.leaveGroup(msg.to)
+                            ki2.leaveGroup(msg.to)
+                            ki3.leaveGroup(msg.to)
+			    ki4.leaveGroup(msg.to)
                         except:
                             pass
             #-------------Fungsi Leave Group Finish---------------#
