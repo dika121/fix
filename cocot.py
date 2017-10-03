@@ -246,7 +246,8 @@ def bot(op):
                     if op.param2 in Bots:
                         pass
                     try:
-                        random.choice(KAC).kickoutFromGroup(op.param1,[op.param2])
+                        ki.kickoutFromGroup(op.param1,[op.param2])
+			ki2.kickoutFromGroup(op.param1,[op.param2])
                     except:
                         try:
                             random.choice(KAC).kickoutFromGroup(op.param1,[op.param2])
@@ -1330,8 +1331,8 @@ def bot(op):
                                 targets.append(g.mid)
                         if targets == []:
                             ki.sendText(msg.to,"Not found.")
-                            #ki2.sendText(msg.to,"Not found.")
-                            #ki3.sendText(msg.to,"Not found.")
+                            ki2.sendText(msg.to,"Not found.")
+                            ki3.sendText(msg.to,"Not found.")
                         else:
                             for target in targets:
                             	if target not in Bots and admin:
@@ -1340,10 +1341,10 @@ def bot(op):
                                         kicker=random.choice(klist)
                                         kicker.kickoutFromGroup(msg.to,[target])
                                         print (msg.to,[g.mid])
-                                    #except:
-                                        #ki.sendText(msg.to,"Group cleanse")
-                                        #ki2.sendText(msg.to,"Group cleanse")
-                                        #ki3.sendText(msg.to,"Group cleanse")
+                                    except:
+                                        ki.sendText(msg.to,"Group cleanse")
+                                        ki2.sendText(msg.to,"Group cleanse")
+                                        ki3.sendText(msg.to,"Group cleanse")
             #----------------Fungsi Kick User Target Start----------------------#
             elif "Nk " in msg.text:
                   if msg.from_ in admin:
