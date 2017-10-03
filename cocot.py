@@ -1227,7 +1227,7 @@ def bot(op):
                     else:
                         cl.sendText(msg.to, "An already read point has not been set.\n「set」you can send ♪ read point will be created ♪")
            #----------------Fungsi Join Group Start-----------------------#
-            elif msg.text in ["one","All join","Ayo masuk","One"]:
+            elif msg.text in ["one","All","Ayo masuk","One"]:
                 if msg.from_ in admin:
                         G = cl.getGroup(msg.to)
                         ginfo = cl.getGroup(msg.to)
@@ -1369,7 +1369,7 @@ def bot(op):
                                     print (msg.to,[g.mid])
                                 except:
                                     ki.sendText(msg.to,"Sorry...")
-                                    kc.sendText(msg.to,".......")
+                                    ki3.sendText(msg.to,".......")
             #----------------Fungsi Kick User Target Finish----------------------#
             
             #----------------Fungsi Bl User Target Start-----------------------#
