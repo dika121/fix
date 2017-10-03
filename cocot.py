@@ -97,7 +97,7 @@ wait = {
     "dblacklist":True,
     "ProtectQR":False,
     "Protectguest":False,
-    "Protectcancel":False,
+    "Protectcancel":True,
     "protectionOn":True,
     "atjointicket":True,
     }
@@ -847,7 +847,33 @@ def bot(op):
                         if wait["lang"] == "JP":
                             cl.sendText(msg.to,"QR Protection Off")
                         else:
+                            cl.sendText(msg.to,"done")		
+	    elif msg.text in ["Proc on","proc on"]:
+                if msg.from_ in Bots:
+                    if wait["Protectcancel"] == False:
+                        if wait["lang"] == "JP":
+                            cl.sendText(msg.to,"Protect cancel on")
+                        else:
                             cl.sendText(msg.to,"done")
+                    else:
+                        wait["Protectcancel"] = False
+                        if wait["lang"] == "JP":
+                            cl.sendText(msg.to,"Protect cancel on")
+                        else:
+                            cl.sendText(msg.to,"done")
+	    elif msg.text in ["Proc off","proc off"]:
+                if msg.from_ in Bots:
+                    if wait["Protectcancel"] == False:
+                        if wait["lang"] == "JP":
+                            cl.sendText(msg.to,"Protect cancel off")
+                        else:
+                            cl.sendText(msg.to,"done")
+                    else:
+                        wait["Protectcancel"] = False
+                        if wait["lang"] == "JP":
+                            cl.sendText(msg.to,"Protect cancel off")
+                        else:
+                            cl.sendText(msg.to,"done")	
 #--------------------------------------------------------
             elif msg.text in ["Contact On","Contact on","contact on"]:
                 if msg.from_ in Bots:
