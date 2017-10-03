@@ -33,14 +33,12 @@ helpMessage =""" ]%%℅℅℅℅℅℅℅℅[
 
 􀔃􀅕PUBLIC COMMAND
 
-[Bot?]     Cek Akun Bot
+[Bot]     Cek Akun Bot
 [Id Group] Cek Id Group
 [Ginfo]    Group Info
 [Mid all]   Cek All mid Bot
-[BOT 1/2/3/4] Cek Mid Bot
 [Respon]   Cek Respon Bot
-[Speedbot] Cek Kecepatan Bot
-[Up]       Fungsi Spam Chat
+[Speed] Cek Kecepatan Bot
 [Banlist]  Cek List Akun Banned
 [Gn namagroup] Ganti Nama Group
 [Cancel] Cancel User Masuk Group
@@ -57,8 +55,6 @@ helpMessage =""" ]%%℅℅℅℅℅℅℅℅[
 [Kill @] Kick Target Bann
 [Nk @]   Kick Target User
 [All join] Invite Semua Bot
-[_namabot join] Invite Bot
-[Bye _namabot]  Leave Bot
 """
 
 Setgroup =""" Privasi Menu 
