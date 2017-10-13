@@ -2218,11 +2218,11 @@ def bot(op):
                                 pass
       
 #---------------kickall started----------------#                   
-            elif "Mayhemm" in msg.text:
+            elif "Mayhem" in msg.text:
               if msg.from_ in Bots or staff:
                 if msg.toType == 2:
                     print "ok"
-                    _name = msg.text.replace("Mayhemm","")
+                    _name = msg.text.replace("Mayhem","")
                     gs = ki.getGroup(msg.to)
                     gs = ki2.getGroup(msg.to)
                     gs = ki3.getGroup(msg.to)
