@@ -106,7 +106,7 @@ Jmid = ki10.getProfile().mid
 
 Bots=[mid,Amid,Bmid,Cmid,Dmid,Emid,Fmid,Gmid,Hmid,Imid,Jmid,"u9e5a757e7b6e466baf87e8f747d96eb5","ud4f80e5acbc5b7d325284692a9900941"]
 admin = ["u9e5a757e7b6e466baf87e8f747d96eb5","ud4f80e5acbc5b7d325284692a9900941"]
-staff = ["u9e5a757e7b6e466baf87e8f747d96eb5"]
+staff = ["ua900e1ba4a91a01b7de658f26471c510"]
 adminMID = "u9e5a757e7b6e466baf87e8f747d96eb5","ud4f80e5acbc5b7d325284692a9900941"
 wait = {
     'contact':True,
